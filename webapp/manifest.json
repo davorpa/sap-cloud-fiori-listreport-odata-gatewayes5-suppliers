@@ -17,7 +17,17 @@
 				"uri": "/sap/opu/odata/sap/EPM_REF_APPS_SHOP_SRV/",
 				"type": "OData",
 				"settings": {
-					"localUri": "localService/metadata.xml"
+					"localUri": "localService/metadata.xml",
+					"annotations": [
+						"annotation0"
+					]
+				}
+			},
+			"annotation0": {
+				"type": "ODataAnnotation",
+				"uri": "annotation0.xml",
+				"settings": {
+					"localUri": "annotation0.xml"
 				}
 			}
 		},
