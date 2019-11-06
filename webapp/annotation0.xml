@@ -12,6 +12,13 @@
 		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"
 			Namespace="SAPGatewayES5FioriListReportAppSupplierData.annotation0.EPM_REF_APPS_SHOP">
 			<Annotations Target="Metadata.Supplier">
+				<Annotation Term="UI.HeaderInfo">
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="TypeName" String="{@i18n&gt;SUPPLIER}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n&gt;SUPPLIERS}"/>
+						<PropertyValue Property="Title" Path="@UI.LineItem"/>
+					</Record>
+				</Annotation>
 				<Annotation Term="UI.PresentationVariant">
 					<Record Type="UI.PresentationVariantType">
 						<PropertyValue Property="SortOrder">
