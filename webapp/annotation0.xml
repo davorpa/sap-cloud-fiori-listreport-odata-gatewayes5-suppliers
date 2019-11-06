@@ -1,6 +1,26 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-	<edmx:Reference Uri="/sap/opu/odata/sap/EPM_REF_APPS_SHOP_SRV/$metadata"/>
+	<edmx:Reference Uri="/sap/opu/odata/sap/EPM_REF_APPS_SHOP_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="EPM_REF_APPS_SHOP"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
 	<edmx:DataServices>
-		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"
+			Namespace="SAPGatewayES5FioriListReportAppSupplierData.annotation0.EPM_REF_APPS_SHOP">
+			<Annotations Target="Metadata.Supplier">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataFieldWithUrl">
+							<PropertyValue Property="Url" Path="WebAddress"/>
+							<PropertyValue Property="Value" Path="Name"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="FormattedAddress"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
 	</edmx:DataServices>
 </edmx:Edmx>
